@@ -6,10 +6,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Sample Web</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 <style>
+
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
+    font-size: 2em;
+}
+h1 { 
+    display: block;
+    font-size: 5em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
 }
 </style>
 <script type="text/javascript">
@@ -27,15 +41,15 @@ function countdown(btn_name, number_product_id) {
 </head>
 <body>
 
+
 <!--         <form action="./Calc" method="POST">-->  
 		<form action="./countUp" method="POST">
-    			               
-        	<span>Product List</span>   
-            <table style="width:100%">
+        	<h1 style="color:red" align="center">Teriyaki</h1>
+            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" align="center">
   			<tr>
-    		<th>product</th>
-    		<th>price</th> 
-    		<th>number</th>
+    		<th style="font-size:2em">product</th>
+    		<th style="font-size:2em">price</th> 
+    		<th style="font-size:2em">number</th>
   			</tr>
  			<tr>
     			<td>Tea</td>
@@ -46,9 +60,13 @@ function countdown(btn_name, number_product_id) {
     			<td><input type="button" value="-"/></td>
     		 	-->
     		 	<td>
-    					<input type="text" name="arg1" value="<%= request.getAttribute("arg1") %>" />
-            			<input type="submit" name="add1" value="+"/>
-            			<input type="submit" name="delete1" value="-"/>
+    		 		<div class="mdl-textfield mdl-js-textfield">
+				    	<input style="font-size:24px" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" name="arg1" value="<%= request.getAttribute("arg1") %>">
+    					<label class="mdl-textfield__label" for="sample2">Number...</label>
+    					<span class="mdl-textfield__error">Input is not a number!</span>
+  					</div>
+    				<input class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored material-icons" type="submit" name="add1" value="+"/>
+            		<input class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored material-icons"type="submit" name="delete1" value="-"/>
             	</td>
             	
   			</tr>
@@ -56,33 +74,52 @@ function countdown(btn_name, number_product_id) {
     			<td>Coffee</td>
     			<td>200<input type="hidden" name="price2" value="200" /></td> 
     			<td>
-    					<input type="text" name="arg2" value="<%= request.getAttribute("arg2") %>" />
-            			<input type="submit" name="add2" value="+"/>
-            			<input type="submit" name="delete2" value="-"/>
+	    			<div class="mdl-textfield mdl-js-textfield">
+				    	<input style="font-size:24px" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" name="arg2" value="<%= request.getAttribute("arg2") %>">
+    					<label class="mdl-textfield__label" for="sample2">Number...</label>
+    					<span class="mdl-textfield__error">Input is not a number!</span>
+  					</div>
+           			<input class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored material-icons"type="submit" name="add2" value="+"/>
+           			<input class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored material-icons"type="submit" name="delete2" value="-"/>
             	</td>
   			</tr>
  			<tr>
     			<td>Teriyaki</td>
     			<td>300<input type="hidden" name="price3" value="300" /></td> 
     			<td>
-    					<input type="text" name="arg3" value="<%= request.getAttribute("arg3") %>" />
-            			<input type="submit" name="add3" value="+"/>
-            			<input type="submit" name="delete3" value="-"/>
+	    			<div class="mdl-textfield mdl-js-textfield">
+				    	<input style="font-size:24px" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" name="arg3" value="<%= request.getAttribute("arg3") %>">
+    					<label class="mdl-textfield__label" for="sample2">Number...</label>
+    					<span class="mdl-textfield__error">Input is not a number!</span>
+  					</div>
+           			<input class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored material-icons"type="submit" name="add3" value="+"/>
+           			<input class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored material-icons"type="submit" name="delete3" value="-"/>
             	</td>
   			</tr>
  			<tr>
     			<td>Magazine</td>
     			<td>300<input type="hidden" name="price4" value="300" /></td> 
     			<td>
-    					<input type="text" name="arg4" value="<%= request.getAttribute("arg4") %>" />
-            			<input type="submit" name="add4" value="+"/>
-            			<input type="submit" name="delete4" value="-"/>
+	    			<div class="mdl-textfield mdl-js-textfield">
+				    	<input style="font-size:24px" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" name="arg4" value="<%= request.getAttribute("arg4") %>">
+    					<label class="mdl-textfield__label" for="sample2">Number...</label>
+    					<span class="mdl-textfield__error">Input is not a number!</span>
+  					</div>
+           			<input class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored material-icons"type="submit" name="add4" value="+"/>
+           			<input class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored material-icons"type="submit" name="delete4" value="-"/>
             	</td>
   			</tr>
 			</table>
-  			<input type="submit" name="calculate" value="OK"/>
-  			Total Cost
-  			<input type="text" name="total" value="<%= request.getAttribute("total") %>"/>
+			<div align="center" style="font-size:2em; margin-top: 0.67em;">
+				<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"type="submit" name="calculate" value="OK"/>
+	  			Total Cost
+	  			<div class="mdl-textfield mdl-js-textfield">
+				    <input style="font-size:24px" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" name="total" value="<%= request.getAttribute("total") %>">
+    				<label class="mdl-textfield__label" for="sample2">Number...</label>
+    				<span class="mdl-textfield__error">Input is not a number!</span>
+  				</div>
+			</div>
+  			
   			</form>
   <!--       </form> -->
 
