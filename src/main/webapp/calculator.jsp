@@ -25,6 +25,11 @@ h1 {
     margin-right: 0;
     font-weight: bold;
 }
+
+body {
+	background-image: url("./teriyaki.jpg");
+	background-size: cover;
+}
 </style>
 <script type="text/javascript">
 function countup(btn_name, number_product_id) {
@@ -43,8 +48,8 @@ function countdown(btn_name, number_product_id) {
 
 
 <!--         <form action="./Calc" method="POST">-->  
-		<form action="./countUp" method="POST">
-        	<h1 style="color:red" align="center">Teriyaki</h1>
+		<form action="./product" method="POST">
+        	<h1 style="color:white" align="center">Teriyaki</h1>
             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" align="center">
   			<tr>
     		<th style="font-size:2em">product</th>
@@ -65,7 +70,7 @@ function countdown(btn_name, number_product_id) {
     					<label class="mdl-textfield__label" for="sample2">Number...</label>
     					<span class="mdl-textfield__error">Input is not a number!</span>
   					</div>
-    				<input class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored material-icons" type="submit" name="add1" value="+"/>
+    				<input class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored material-icons" type="submit" id="add1" name="add1" value="+"/>
             		<input class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored material-icons"type="submit" name="delete1" value="-"/>
             	</td>
             	
@@ -79,7 +84,7 @@ function countdown(btn_name, number_product_id) {
     					<label class="mdl-textfield__label" for="sample2">Number...</label>
     					<span class="mdl-textfield__error">Input is not a number!</span>
   					</div>
-           			<input class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored material-icons"type="submit" name="add2" value="+"/>
+           			<input class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored material-icons"type="submit" id="add2" name="add2" value="+"/>
            			<input class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored material-icons"type="submit" name="delete2" value="-"/>
             	</td>
   			</tr>
@@ -110,8 +115,8 @@ function countdown(btn_name, number_product_id) {
             	</td>
   			</tr>
 			</table>
-			<div align="center" style="font-size:2em; margin-top: 0.67em;">
-				<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"type="submit" name="calculate" value="OK"/>
+			<div align="center" style="color:white; font-size:2em; margin-top: 0.67em;">
+				<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"type="submit" id="calculate" name="calculate" value="OK"/>
 	  			Total Cost
 	  			<div class="mdl-textfield mdl-js-textfield">
 				    <input style="font-size:24px" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" name="total" value="<%= request.getAttribute("total") %>">

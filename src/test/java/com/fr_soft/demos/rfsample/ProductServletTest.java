@@ -10,9 +10,9 @@ import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 
-public class CountUpServletTest {
+public class ProductServletTest {
 
-    private CountUpServlet servlet = new CountUpServlet();
+    private ProductServlet servlet = new ProductServlet();
     private MockHttpServletRequest request = new MockHttpServletRequest();
     private MockHttpServletResponse response = new MockHttpServletResponse();
 

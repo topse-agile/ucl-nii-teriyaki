@@ -7,28 +7,29 @@ ${BROWSER}        chrome
 *** Test Cases ***
 Add Operation Works Well
     [Template]    Add Operation Workflow
-    1    1    0
-    100    200    -100
-    XYZ    150    N/A
+    0    1
 
 *** Keywords ***
 Add Operation Workflow
-    [Arguments]    ${arg1}    ${arg2}    ${expected}
+    [Arguments]    ${arg1}  ${expected}
     Open Application Page
-    ${calc_value}=    Calculate In Application Page    ${arg1}    ${arg2}
+    ${calc_value}=    Calculate In Application Page    ${arg1}
     Should Be Equal    ${calc_value}    ${expected}
     Close Application Page
 
 Open Application Page
-    Open Browser    http://localhost:9080/RFSample/calculate    ${BROWSER}
+    Open Browser    http://localhost:9080/RFSample/product    ${BROWSER}
 
 Calculate In Application Page
-    [Arguments]    ${arg1}    ${arg2}
+    [Arguments]    ${arg1}  ${arg2}
     Input Text    arg1    ${arg1}
     Input Text    arg2    ${arg2}
+    Click Button   add1
+    Click Button   add2
+    Click Button   calculate
     Submit Form
-    ${result}=    Get Value    result
+    ${result}=    Get Value    sample2
     [Return]    ${result}
-
+    
 Close Application Page
     Close Browser
