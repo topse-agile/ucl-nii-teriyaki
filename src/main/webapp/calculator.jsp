@@ -57,7 +57,7 @@ function countdown(btn_name, number_product_id) {
     		<th style="font-size:2em">number</th>
   			</tr>
  			<tr>
-    			<td>Tea</td>
+    			<td>Tea<img src="./tea.png" width="60" height="60"/></td>
     			<td>100<input type="hidden" name="price1" value="100" /></td>
     			<!-- 
     			<td><input id="number_tea" type="text" value="0"/></td>
@@ -76,7 +76,7 @@ function countdown(btn_name, number_product_id) {
             	
   			</tr>
  			<tr>
-    			<td>Coffee</td>
+    			<td>Coffee<img src="./coffee.png" width="60" height="60"/></td>
     			<td>200<input type="hidden" name="price2" value="200" /></td> 
     			<td>
 	    			<div class="mdl-textfield mdl-js-textfield">
@@ -89,7 +89,7 @@ function countdown(btn_name, number_product_id) {
             	</td>
   			</tr>
  			<tr>
-    			<td>Teriyaki</td>
+    			<td>Teriyaki<img src="./meat.png" width="60" height="60"/></td>
     			<td>300<input type="hidden" name="price3" value="300" /></td> 
     			<td>
 	    			<div class="mdl-textfield mdl-js-textfield">
@@ -102,7 +102,7 @@ function countdown(btn_name, number_product_id) {
             	</td>
   			</tr>
  			<tr>
-    			<td>Magazine</td>
+    			<td>Magazine<img src="./magazine.png" width="60" height="60"/></td>
     			<td>300<input type="hidden" name="price4" value="300" /></td> 
     			<td>
 	    			<div class="mdl-textfield mdl-js-textfield">
